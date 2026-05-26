@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.idgs905baseandroid.Ejemplo1.ejemplo1
 import com.example.idgs905baseandroid.DistanciaPuntos.distanciapuntos
 import com.example.idgs905baseandroid.Ejemplo2.Ejemplo2Activity
+import com.example.idgs905baseandroid.MultiplicaAporB.OperacionActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +38,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         btnEjemplo2.setOnClickListener { navegateToEjemplo2() }
+        val btnEjemplo4=findViewById<Button>(R.id.btn4)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        btnEjemplo4.setOnClickListener { navegateToEjemplo4() }
     }
 
     fun navegateToEjemplo1(){
@@ -55,6 +63,13 @@ class MainActivity : AppCompatActivity() {
 
     fun navegateToEjemplo2(){
         val intent= Intent(this, Ejemplo2Activity::class.java)
+        startActivity(
+            intent
+        )
+    }
+
+    fun navegateToEjemplo4(){
+        val intent= Intent(this, OperacionActivity::class.java)
         startActivity(
             intent
         )
