@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#ADD8E6">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular Valor de resistencias"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#CCFF33"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/imgTabla"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/resistencias"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Spinner
+            android:id="@+id/spinnerBanda1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvValor1"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Spinner
+            android:id="@+id/spinnerBanda2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvValor2"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Spinner
+            android:id="@+id/spinnerMultiplicador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvValorMult"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:background="#A52A2A"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tolerancia"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroupTolerancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbOro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="oro" />
+
+            <RadioButton
+                android:id="@+id/rbPlata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="plata" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/viewTolerancia"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:background="#FFD700" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calcular"
+        android:backgroundTint="#CCFF33"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvValorOhm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor ohm: "
+        android:visibility="invisible"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvValorMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor maximo: "
+        android:visibility="invisible"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvValorMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor minimo: "
+        android:visibility="invisible"
+        android:textStyle="bold"/>
+
+</LinearLayout>

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IDGS905BaseAndroid">
         <activity
+            android:name=".ExamenResistencia.ExamenActivity"
+            android:exported="false" />
+        <activity
             android:name=".Ejemplo3.Ejemplo3Activity"
             android:exported="false" />
         <activity
